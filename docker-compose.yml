@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    build:
+      context: .
+    image: country-search
+    ports:
+      - 80:3000
