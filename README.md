@@ -23,4 +23,4 @@ This shell file is for run application with docker.
 
 ## Environment files
  - .env **for development mode**
- - .env **for production mode**
+ - .env.local **for production mode**
