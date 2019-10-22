@@ -1,4 +1,4 @@
-##This project is to search for countries with the capital of the country.
+## This project is to search for countries with the capital of the country.
 
 ## Available Scripts
 
