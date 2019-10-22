@@ -7,7 +7,6 @@ RUN mkdir app
 WORKDIR /app
 
 ADD . .
-RUN ls
 RUN yarn install && chmod +x ./entrypoint.sh
 
 CMD ["./entrypoint.sh"]

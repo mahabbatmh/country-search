@@ -1,6 +1,7 @@
 import { spawn, call, all, delay } from "redux-saga/effects";
 
 import countries from './country';
+import global from './global';
 
 const makeRestartable = saga => {
     return function*() {
@@ -17,7 +18,8 @@ const makeRestartable = saga => {
     };
 };
 const rootSagas = [
-    countries
+    countries,
+    global
 ].map(makeRestartable);
 export default function* rootSaga() {
     yield all(rootSagas.map(saga => call(saga)));

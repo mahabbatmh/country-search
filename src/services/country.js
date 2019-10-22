@@ -14,9 +14,12 @@ const with_alpha_url = '/alpha';
 
 const getCountryWithCapital = capital_name =>
     adapter({
-        url: `${with_capital_url}?fields=${main_country_fields}`,
+        url: `${with_capital_url}/${capital_name}?fields=${main_country_fields}`,
         method: types.GET
-    }).then(response => new Country(response));
+    }).then(response => {
+        response[0].loaded = true;
+        return new Country(response[0]);
+    });
 /**
  *
  * @param alpha_code { string }
@@ -24,7 +27,7 @@ const getCountryWithCapital = capital_name =>
  */
 const getCountryWithAlpha = alpha_code =>
     adapter({
-        url:`${with_alpha_url}?fields=name;`,
+        url:`${with_alpha_url}/${alpha_code}?fields=name;`,
         method: types.GET
     });
 

@@ -1,0 +1,41 @@
+@import "../../../assets/styles/variables";
+.capital-list{
+  border: 1px solid $border-color;
+  border-bottom: none;
+  flex-basis: 44%;
+  height: 100%;
+  border-radius: 7px;
+  .capital{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+    border-radius: 7px;
+    padding: 10px 26px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &.active{
+      background-color: #2185d0;
+      color: white;
+      border-bottom-color: #2185d0;
+    }
+    &:hover{
+      background-color: $primaryBlue;
+      color: white;
+      border-bottom-color: $primaryBlue;
+    }
+    &-name{
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+    }
+    &-remove{
+      font-size: 10px;
+      padding: 5px 10px 6px 10px;
+      background-color: $primaryBlue;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}

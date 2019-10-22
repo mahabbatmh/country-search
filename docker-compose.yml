@@ -4,9 +4,11 @@ services:
   web:
     env_file:
       - .env
+      - .env.local
     volumes:
       - ./src:/app/src
       - ./public:/app/public
+      - ./package.json:/app/package.json
     build:
       context: .
     image: country-search

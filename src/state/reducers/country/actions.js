@@ -3,6 +3,7 @@ import {CHANGE_SELECTED_COUNTRY, FETCH_COUNTRY_SUCCESS, ON_CAPITAL_NAME_SUBMIT, 
 export const capitalNameSubmit = (control, capital_name) => ({
     type: ON_CAPITAL_NAME_SUBMIT,
     payload: {
+        control,
         capital_name
     }
 });
@@ -14,16 +15,16 @@ export const fetchCountrySuccess = country => ({
     }
 });
 
-export const changeSelectedCountry = country_name => ({
+export const changeSelectedCountry = capital_name => ({
     type: CHANGE_SELECTED_COUNTRY,
     payload:{
-        country_name
+        capital_name
     }
 });
 
-export const removeCountry = country_name => ({
+export const removeCountry = capital_name => ({
     type: REMOVE_COUNTRY,
     payload: {
-        country_name
+        capital_name
     }
 });
